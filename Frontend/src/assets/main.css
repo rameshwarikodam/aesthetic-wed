@@ -1,0 +1,23 @@
+/* @import './base.css'; */
+@import '@aherrahul/design-system/dist/style.css';
+
+* {
+    font-family: Satoshi, Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+:root {
+	font-family: Satoshi, Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: Satoshi, Inter, Avenir, Helvetica, Arial, sans-serif;
+    margin: 0px !important;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+p {
+    text-align: justify;
+}

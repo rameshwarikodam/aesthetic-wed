@@ -33,11 +33,25 @@
 </template>
 
 
-<script setup lang="ts">
+<script>
 // imports
 import { ref } from 'vue';
 
+export default {
+  name: 'Home',
 
+  data() {
+    return {
+
+    }
+  },
+
+  methods: {
+    logClick() {
+      console.log('called');
+    }
+  }
+}
 </script>
 
 <style>

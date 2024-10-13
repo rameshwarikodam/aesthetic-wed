@@ -13,21 +13,16 @@ import axios from 'axios';
 import RDS from '@aherrahul/design-system';
 import '@aherrahul/design-system/dist/style.css';
 import mitt from 'mitt';
-
 // Create the Vue app instance
 const app = createApp(App);
-
 // Use router, store, and other plugins
 app.use(router);
 app.use(store);
 app.use(RDS);
 app.mixin(Auth);
-
 // Create an event bus using mitt
 const EventBus = mitt();
 app.config.globalProperties.$eventBus = EventBus; // Set event bus globally
-
-
 // Axios response interceptor for handling authentication and token setup
 axios.interceptors.response.use((response) => {
     // After successful verification, set MP cookie for seamless login
@@ -47,12 +42,11 @@ axios.interceptors.response.use((response) => {
     }
     return Promise.reject(error);
 });
-
 console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV !== 'development') {
-  console.warn = () => {};
-  console.log = () => {};
+    console.warn = () => { };
+    console.log = () => { };
 }
-
 // Mount the app
 app.mount('#app');
+//# sourceMappingURL=main.js.map
